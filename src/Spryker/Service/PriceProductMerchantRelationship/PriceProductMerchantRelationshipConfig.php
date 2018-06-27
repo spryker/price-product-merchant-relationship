@@ -5,9 +5,9 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\PriceProductMerchantRelationship;
+namespace Spryker\Service\PriceProductMerchantRelationship;
 
-use Spryker\Zed\Kernel\AbstractBundleConfig;
+use Spryker\Service\Kernel\AbstractBundleConfig;
 
 /**
  * @method \Spryker\Shared\PriceProductMerchantRelationship\PriceProductMerchantRelationshipConfig getSharedConfig()
