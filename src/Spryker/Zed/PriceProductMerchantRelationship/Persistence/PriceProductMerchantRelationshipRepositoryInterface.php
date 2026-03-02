@@ -13,22 +13,9 @@ use Generated\Shared\Transfer\QueryCriteriaTransfer;
 
 interface PriceProductMerchantRelationshipRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductCriteriaTransfer $priceProductCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer|null
-     */
     public function buildMerchantRelationshipPriceDimensionQueryCriteria(PriceProductCriteriaTransfer $priceProductCriteriaTransfer): ?QueryCriteriaTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     public function buildUnconditionalMerchantRelationshipPriceDimensionQueryCriteria(): QueryCriteriaTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return string|null
-     */
     public function findIdByPriceProductTransfer(PriceProductTransfer $priceProductTransfer): ?string;
 }

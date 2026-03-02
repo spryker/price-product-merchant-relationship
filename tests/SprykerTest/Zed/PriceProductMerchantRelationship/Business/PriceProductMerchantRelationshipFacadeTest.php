@@ -53,9 +53,6 @@ class PriceProductMerchantRelationshipFacadeTest extends Unit
         $this->assertSame(0, $priceProductMerchantRelationshipQuery->count());
     }
 
-    /**
-     * @return \Orm\Zed\PriceProductMerchantRelationship\Persistence\SpyPriceProductMerchantRelationshipQuery
-     */
     protected function getPriceProductMerchantRelationshipQuery(): SpyPriceProductMerchantRelationshipQuery
     {
         return SpyPriceProductMerchantRelationshipQuery::create();

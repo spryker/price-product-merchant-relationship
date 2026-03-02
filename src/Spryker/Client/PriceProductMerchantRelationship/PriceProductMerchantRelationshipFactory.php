@@ -12,9 +12,6 @@ use Spryker\Client\PriceProductMerchantRelationship\Dependency\Client\PriceProdu
 
 class PriceProductMerchantRelationshipFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\PriceProductMerchantRelationship\Dependency\Client\PriceProductMerchantRelationshipToCartClientInterface
-     */
     public function getCartClient(): PriceProductMerchantRelationshipToCartClientInterface
     {
         return $this->getProvidedDependency(PriceProductMerchantRelationshipDependencyProvider::CLIENT_CART);

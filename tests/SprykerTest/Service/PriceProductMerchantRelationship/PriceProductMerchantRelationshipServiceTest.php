@@ -28,9 +28,6 @@ class PriceProductMerchantRelationshipServiceTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testFilterPriceProductsByMerchantRelationshipWillFilterOutMerchantPrices(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class PriceProductMerchantRelationshipServiceTest extends Unit
         $this->assertSame(1, $priceProductTransfers[0]->getPriceDimension()->getIdMerchantRelationship());
     }
 
-    /**
-     * @return void
-     */
     public function testFilterPriceProductsByMerchantRelationshipWillNotFilterOutPricesWithoutMerchantReference(): void
     {
         // Arrange
@@ -83,9 +77,6 @@ class PriceProductMerchantRelationshipServiceTest extends Unit
         $this->assertCount(2, $priceProductTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testFilterPriceProductsByMerchantRelationshipWillNotFilterOutMerchantPricesIfPriceProductFilterDoesNotHaveMerchantReference(): void
     {
         // Arrange

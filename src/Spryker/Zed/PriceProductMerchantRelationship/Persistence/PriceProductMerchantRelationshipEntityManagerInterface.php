@@ -13,50 +13,21 @@ use Spryker\Shared\Kernel\Transfer\EntityTransferInterface;
 
 interface PriceProductMerchantRelationshipEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
-     *
-     * @return \Spryker\Shared\Kernel\Transfer\EntityTransferInterface
-     */
     public function saveEntity(
         SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
     ): EntityTransferInterface;
 
-    /**
-     * @param int $idPriceProductStore
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStoreAndIdMerchantRelationship(
         int $idPriceProductStore,
         int $idMerchantRelationship
     ): void;
 
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdMerchantRelationship(int $idMerchantRelationship): void;
 
-    /**
-     * @param int $idProductStore
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStore(int $idProductStore): void;
 
-    /**
-     * @return void
-     */
     public function deleteAll(): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
-     *
-     * @return void
-     */
     public function deleteCollection(
         PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
     ): void;

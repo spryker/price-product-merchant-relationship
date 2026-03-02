@@ -35,11 +35,6 @@ class MerchantRelationshipPriceProductFilter implements MerchantRelationshipPric
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductFilterTransfer $priceProductFilterTransfer
-     *
-     * @return bool
-     */
     protected function isPriceProductFilterHasMerchantRelationship(PriceProductFilterTransfer $priceProductFilterTransfer): bool
     {
         return $priceProductFilterTransfer->getPriceDimension() && $priceProductFilterTransfer->getPriceDimension()->getIdMerchantRelationship();
@@ -61,22 +56,11 @@ class MerchantRelationshipPriceProductFilter implements MerchantRelationshipPric
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return bool
-     */
     protected function isPriceProductHasMerchantRelationship(PriceProductTransfer $priceProductTransfer): bool
     {
         return $priceProductTransfer->getPriceDimension() && $priceProductTransfer->getPriceDimension()->getIdMerchantRelationship();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     * @param \Generated\Shared\Transfer\PriceProductFilterTransfer $priceProductFilterTransfer
-     *
-     * @return bool
-     */
     protected function isSameMerchantRelationship(
         PriceProductTransfer $priceProductTransfer,
         PriceProductFilterTransfer $priceProductFilterTransfer

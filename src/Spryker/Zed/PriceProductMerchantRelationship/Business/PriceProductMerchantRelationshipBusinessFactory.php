@@ -22,9 +22,6 @@ use Spryker\Zed\PriceProductMerchantRelationship\PriceProductMerchantRelationshi
  */
 class PriceProductMerchantRelationshipBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\PriceProductMerchantRelationship\Business\Model\MerchantRelationshipPriceWriterInterface
-     */
     public function createMerchantRelationshipPriceWriter(): MerchantRelationshipPriceWriterInterface
     {
         return new MerchantRelationshipPriceWriter(
@@ -44,17 +41,11 @@ class PriceProductMerchantRelationshipBusinessFactory extends AbstractBusinessFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductMerchantRelationship\Dependency\Facade\PriceProductMerchantRelationshipToPriceProductFacadeInterface
-     */
     public function getPriceProductFacade(): PriceProductMerchantRelationshipToPriceProductFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductMerchantRelationshipDependencyProvider::FACADE_PRICE_PRODUCT);
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductMerchantRelationship\Dependency\Facade\PriceProductMerchantRelationshipToMerchantRelationshipFacadeInterface
-     */
     public function getMerchantRelationshipFacade(): PriceProductMerchantRelationshipToMerchantRelationshipFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductMerchantRelationshipDependencyProvider::FACADE_MERCHANT_RELATIONSHIP);

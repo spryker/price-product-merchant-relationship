@@ -24,11 +24,6 @@ class PriceProductMerchantRelationshipToMerchantRelationshipFacadeBridge impleme
         $this->merchantRelationshipFacade = $merchantRelationshipFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer
-     */
     public function getMerchantRelationshipById(MerchantRelationshipTransfer $merchantRelationshipTransfer): MerchantRelationshipTransfer
     {
         return $this->merchantRelationshipFacade->getMerchantRelationshipById($merchantRelationshipTransfer);

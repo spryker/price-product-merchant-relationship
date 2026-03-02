@@ -19,20 +19,12 @@ class PriceProductDimensionExpander implements PriceProductDimensionExpanderInte
      */
     protected $merchantRelationshipFacade;
 
-    /**
-     * @param \Spryker\Zed\PriceProductMerchantRelationship\Dependency\Facade\PriceProductMerchantRelationshipToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     */
     public function __construct(
         PriceProductMerchantRelationshipToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
     ) {
         $this->merchantRelationshipFacade = $merchantRelationshipFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductDimensionTransfer $priceProductDimensionTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductDimensionTransfer
-     */
     public function expand(PriceProductDimensionTransfer $priceProductDimensionTransfer): PriceProductDimensionTransfer
     {
         $merchantRelationshipTransfer = (new MerchantRelationshipTransfer())

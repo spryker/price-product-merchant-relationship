@@ -19,17 +19,11 @@ use Spryker\Zed\PriceProductMerchantRelationship\Persistence\Propel\PriceDimensi
  */
 class PriceProductMerchantRelationshipPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Spryker\Zed\PriceProductMerchantRelationship\Persistence\Propel\PriceDimensionQueryExpander\MerchantRelationshipPriceQueryExpanderInterface
-     */
     public function createMerchantRelationshipPriceQueryExpander(): MerchantRelationshipPriceQueryExpanderInterface
     {
         return new MerchantRelationshipPriceQueryExpander();
     }
 
-    /**
-     * @return \Orm\Zed\PriceProductMerchantRelationship\Persistence\SpyPriceProductMerchantRelationshipQuery
-     */
     public function createPriceProductMerchantRelationshipQuery(): SpyPriceProductMerchantRelationshipQuery
     {
         return SpyPriceProductMerchantRelationshipQuery::create();

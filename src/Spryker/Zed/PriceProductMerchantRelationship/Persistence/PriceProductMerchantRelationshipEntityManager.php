@@ -19,11 +19,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManager implements PriceProductMerchantRelationshipEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
-     *
-     * @return \Spryker\Shared\Kernel\Transfer\EntityTransferInterface
-     */
     public function saveEntity(
         SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
     ): EntityTransferInterface {
@@ -34,11 +29,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         return $this->createPriceProductMerchantRelationshipEntity($priceProductMerchantRelationshipEntityTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
-     *
-     * @return \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer
-     */
     protected function createPriceProductMerchantRelationshipEntity(
         SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
     ): SpyPriceProductMerchantRelationshipEntityTransfer {
@@ -53,11 +43,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         return $priceProductMerchantRelationshipEntityTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
-     *
-     * @return \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer
-     */
     protected function updatePriceProductMerchantRelationshipEntity(
         SpyPriceProductMerchantRelationshipEntityTransfer $priceProductMerchantRelationshipEntityTransfer
     ): SpyPriceProductMerchantRelationshipEntityTransfer {
@@ -82,12 +67,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         return $priceProductMerchantRelationshipEntityTransfer;
     }
 
-    /**
-     * @param int $idPriceProductStore
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStoreAndIdMerchantRelationship(
         int $idPriceProductStore,
         int $idMerchantRelationship
@@ -102,11 +81,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         }
     }
 
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdMerchantRelationship(int $idMerchantRelationship): void
     {
         $priceProductMerchantRelationshipEntities = $this->getFactory()
@@ -117,11 +91,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         $this->deleteEntitiesAndTriggerEvents($priceProductMerchantRelationshipEntities);
     }
 
-    /**
-     * @param int $idProductStore
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStore(int $idProductStore): void
     {
         $priceProductMerchantRelationshipEntities = $this->getFactory()
@@ -132,9 +101,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         $this->deleteEntitiesAndTriggerEvents($priceProductMerchantRelationshipEntities);
     }
 
-    /**
-     * @return void
-     */
     public function deleteAll(): void
     {
         $priceProductMerchantRelationshipEntities = $this->getFactory()
@@ -144,11 +110,6 @@ class PriceProductMerchantRelationshipEntityManager extends AbstractEntityManage
         $this->deleteEntitiesAndTriggerEvents($priceProductMerchantRelationshipEntities);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
-     *
-     * @return void
-     */
     public function deleteCollection(
         PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
     ): void {

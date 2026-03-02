@@ -23,11 +23,6 @@ class MerchantRelationshipPriceQueryExpander implements MerchantRelationshipPric
      */
     public const COL_ID_PRICE_PRODUCT_STORE = 'spy_price_product_store.id_price_product_store';
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductCriteriaTransfer $priceProductCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer|null
-     */
     public function buildMerchantRelationshipPriceDimensionQueryCriteria(PriceProductCriteriaTransfer $priceProductCriteriaTransfer): ?QueryCriteriaTransfer
     {
         if ($priceProductCriteriaTransfer->getWithAllMerchantPrices()) {
@@ -51,9 +46,6 @@ class MerchantRelationshipPriceQueryExpander implements MerchantRelationshipPric
         return $this->createQueryCriteriaTransfer($merchantRelationshipIds);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     public function buildUnconditionalMerchantRelationshipPriceDimensionQueryCriteria(): QueryCriteriaTransfer
     {
         return (new QueryCriteriaTransfer())
@@ -68,11 +60,6 @@ class MerchantRelationshipPriceQueryExpander implements MerchantRelationshipPric
             );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductCriteriaTransfer $priceProductCriteriaTransfer
-     *
-     * @return array
-     */
     protected function findMerchantRelationshipIds(PriceProductCriteriaTransfer $priceProductCriteriaTransfer): array
     {
         if (!$priceProductCriteriaTransfer->getQuote()) {
@@ -122,9 +109,6 @@ class MerchantRelationshipPriceQueryExpander implements MerchantRelationshipPric
             );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     protected function createQueryCriteriaTransferForAllMerchantPrices(): QueryCriteriaTransfer
     {
         return (new QueryCriteriaTransfer())

@@ -13,37 +13,14 @@ use Generated\Shared\Transfer\PriceProductTransfer;
 
 interface MerchantRelationshipPriceWriterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function save(PriceProductTransfer $priceProductTransfer): PriceProductTransfer;
 
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdMerchantRelationship(int $idMerchantRelationship): void;
 
-    /**
-     * @return void
-     */
     public function deleteAll(): void;
 
-    /**
-     * @param int $idPriceProductStore
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStore(int $idPriceProductStore): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionResponseTransfer
-     */
     public function deleteCollection(
         PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $priceProductMerchantRelationshipCollectionDeleteCriteriaTransfer
     ): PriceProductMerchantRelationshipCollectionResponseTransfer;

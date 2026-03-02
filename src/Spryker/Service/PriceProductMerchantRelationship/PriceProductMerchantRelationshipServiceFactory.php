@@ -16,9 +16,6 @@ use Spryker\Service\PriceProductMerchantRelationship\Filter\MerchantRelationship
  */
 class PriceProductMerchantRelationshipServiceFactory extends AbstractServiceFactory
 {
-    /**
-     * @return \Spryker\Service\PriceProductMerchantRelationship\Filter\MerchantRelationshipPriceProductFilterInterface
-     */
     public function createMerchantRelationshipPriceProductFilter(): MerchantRelationshipPriceProductFilterInterface
     {
         return new MerchantRelationshipPriceProductFilter();

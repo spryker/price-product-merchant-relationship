@@ -24,11 +24,6 @@ class PriceProductMerchantRelationshipToPriceProductFacadeBridge implements Pric
         $this->priceProductFacade = $priceProductFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function persistPriceProductStore(PriceProductTransfer $priceProductTransfer): PriceProductTransfer
     {
         return $this->priceProductFacade->persistPriceProductStore($priceProductTransfer);

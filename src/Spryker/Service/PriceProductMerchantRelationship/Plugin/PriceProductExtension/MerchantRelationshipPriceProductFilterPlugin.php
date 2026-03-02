@@ -89,12 +89,6 @@ class MerchantRelationshipPriceProductFilterPlugin extends AbstractPlugin implem
         return PriceProductMerchantRelationshipConfig::PRICE_DIMENSION_MERCHANT_RELATIONSHIP;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     * @param string $priceMode
-     *
-     * @return bool
-     */
     protected function hasPriceByPriceMode(PriceProductTransfer $priceProductTransfer, string $priceMode): bool
     {
         return ($priceMode === PriceProductConfig::PRICE_GROSS_MODE && $priceProductTransfer->getMoneyValue()->getGrossAmount() !== null) ||

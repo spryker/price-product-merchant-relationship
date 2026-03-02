@@ -9,8 +9,5 @@ namespace Spryker\Client\PriceProductMerchantRelationship\Dependency\Client;
 
 interface PriceProductMerchantRelationshipToCartClientInterface
 {
-    /**
-     * @return void
-     */
     public function reloadItems(): void;
 }

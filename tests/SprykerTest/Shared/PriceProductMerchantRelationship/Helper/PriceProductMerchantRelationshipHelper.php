@@ -29,12 +29,6 @@ class PriceProductMerchantRelationshipHelper extends Module
 {
     use LocatorHelperTrait;
 
-    /**
-     * @param int $idCompanyBusinessUnit
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function haveMerchantRelationshipToCompanyBusinessUnit(
         int $idCompanyBusinessUnit,
         int $idMerchantRelationship
@@ -45,17 +39,11 @@ class PriceProductMerchantRelationshipHelper extends Module
             ->save();
     }
 
-    /**
-     * @return void
-     */
     public function ensurePriceProductMerchantRelationshipTableIsEmpty(): void
     {
         $this->getTableRelationsCleanupHelper()->ensureDatabaseTableIsEmpty($this->getPriceProductMerchantRelationshipQuery());
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function haveProductAbstractPriceProductMerchantRelationship(): PriceProductTransfer
     {
         $idProductAbstract = $this->getProductDataHelper()->haveProductAbstract()->getIdProductAbstractOrFail();
@@ -74,9 +62,6 @@ class PriceProductMerchantRelationshipHelper extends Module
         return $this->havePriceProductMerchantRelationship($priceProductTransfer);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function haveProductConcretePriceProductMerchantRelationship(): PriceProductTransfer
     {
         $productConcreteTransfer = $this->getProductDataHelper()->haveProduct();
@@ -96,11 +81,6 @@ class PriceProductMerchantRelationshipHelper extends Module
         return $this->havePriceProductMerchantRelationship($priceProductTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function havePriceProductMerchantRelationship(
         PriceProductTransfer $priceProductTransfer
     ): PriceProductTransfer {
@@ -114,9 +94,6 @@ class PriceProductMerchantRelationshipHelper extends Module
             ->savePriceProductMerchantRelationship($priceProductTransfer);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer
-     */
     protected function createMerchantRelationship(): MerchantRelationshipTransfer
     {
         $merchantTransfer = $this->getMerchantHelper()->haveMerchant();
@@ -143,17 +120,11 @@ class PriceProductMerchantRelationshipHelper extends Module
         return $merchantRelationshipTransfer;
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProduct\Business\PriceProductFacadeInterface
-     */
     protected function getPriceProductFacade(): PriceProductFacadeInterface
     {
         return $this->getLocator()->priceProduct()->facade();
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductMerchantRelationship\Business\PriceProductMerchantRelationshipFacadeInterface
-     */
     protected function getPriceProductMerchantRelationshipFacade(): PriceProductMerchantRelationshipFacadeInterface
     {
         return $this->getLocator()->priceProductMerchantRelationship()->facade();
@@ -215,9 +186,6 @@ class PriceProductMerchantRelationshipHelper extends Module
         return $this->getModule('\\' . TableRelationsCleanupHelper::class);
     }
 
-    /**
-     * @return \Orm\Zed\PriceProductMerchantRelationship\Persistence\SpyPriceProductMerchantRelationshipQuery
-     */
     protected function getPriceProductMerchantRelationshipQuery(): SpyPriceProductMerchantRelationshipQuery
     {
         return SpyPriceProductMerchantRelationshipQuery::create();

@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\PriceProductTransfer;
 
 interface PriceProductMerchantRelationshipToPriceProductFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function persistPriceProductStore(PriceProductTransfer $priceProductTransfer): PriceProductTransfer;
 }

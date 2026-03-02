@@ -32,11 +32,6 @@ class MerchantRelationshipPriceWriter implements MerchantRelationshipPriceWriter
      */
     protected $priceProductFacade;
 
-    /**
-     * @param \Spryker\Zed\PriceProductMerchantRelationship\Persistence\PriceProductMerchantRelationshipEntityManagerInterface $priceProductMerchantRelationshipEntityManager
-     * @param \Spryker\Zed\PriceProductMerchantRelationship\Persistence\PriceProductMerchantRelationshipRepositoryInterface $priceProductMerchantRelationshipRepository
-     * @param \Spryker\Zed\PriceProductMerchantRelationship\Dependency\Facade\PriceProductMerchantRelationshipToPriceProductFacadeInterface $priceProductFacade
-     */
     public function __construct(
         PriceProductMerchantRelationshipEntityManagerInterface $priceProductMerchantRelationshipEntityManager,
         PriceProductMerchantRelationshipRepositoryInterface $priceProductMerchantRelationshipRepository,
@@ -47,11 +42,6 @@ class MerchantRelationshipPriceWriter implements MerchantRelationshipPriceWriter
         $this->priceProductFacade = $priceProductFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     public function save(PriceProductTransfer $priceProductTransfer): PriceProductTransfer
     {
         $priceProductTransfer
@@ -71,31 +61,16 @@ class MerchantRelationshipPriceWriter implements MerchantRelationshipPriceWriter
         return $priceProductTransfer;
     }
 
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return void
-     */
     public function deleteByIdMerchantRelationship(int $idMerchantRelationship): void
     {
         $this->priceProductMerchantRelationshipEntityManager->deleteByIdMerchantRelationship($idMerchantRelationship);
     }
 
-    /**
-     * @param int $idPriceProductStore
-     *
-     * @return void
-     */
     public function deleteByIdPriceProductStore(int $idPriceProductStore): void
     {
         $this->priceProductMerchantRelationshipEntityManager->deleteByIdPriceProductStore($idPriceProductStore);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $productReviewCollectionDeleteCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\PriceProductMerchantRelationshipCollectionResponseTransfer
-     */
     public function deleteCollection(
         PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer $productReviewCollectionDeleteCriteriaTransfer
     ): PriceProductMerchantRelationshipCollectionResponseTransfer {
@@ -106,19 +81,11 @@ class MerchantRelationshipPriceWriter implements MerchantRelationshipPriceWriter
         return new PriceProductMerchantRelationshipCollectionResponseTransfer();
     }
 
-    /**
-     * @return void
-     */
     public function deleteAll(): void
     {
         $this->priceProductMerchantRelationshipEntityManager->deleteAll();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return \Generated\Shared\Transfer\SpyPriceProductMerchantRelationshipEntityTransfer
-     */
     protected function getPriceProductMerchantRelationshipEntityTransfer(
         PriceProductTransfer $priceProductTransfer
     ): SpyPriceProductMerchantRelationshipEntityTransfer {

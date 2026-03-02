@@ -18,11 +18,6 @@ class PriceProductMerchantRelationshipDependencyProvider extends AbstractDepende
      */
     public const CLIENT_CART = 'CLIENT_CART';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = $this->addCartClient($container);
@@ -30,11 +25,6 @@ class PriceProductMerchantRelationshipDependencyProvider extends AbstractDepende
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     private function addCartClient(Container $container): Container
     {
         $container->set(static::CLIENT_CART, function (Container $container) {

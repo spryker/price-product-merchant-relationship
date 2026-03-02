@@ -22,9 +22,6 @@ class PriceProductMerchantRelationshipToCartClientBridge implements PriceProduct
         $this->cartClient = $cartClient;
     }
 
-    /**
-     * @return void
-     */
     public function reloadItems(): void
     {
         $this->cartClient->reloadItems();
