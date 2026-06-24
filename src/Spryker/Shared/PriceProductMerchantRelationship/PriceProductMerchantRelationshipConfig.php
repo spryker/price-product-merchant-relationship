@@ -12,6 +12,8 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class PriceProductMerchantRelationshipConfig extends AbstractSharedConfig
 {
     /**
+     * @api
+     *
      * Price Dimension Merchant Relationship
      *
      * @var string
@@ -19,6 +21,8 @@ class PriceProductMerchantRelationshipConfig extends AbstractSharedConfig
     public const PRICE_DIMENSION_MERCHANT_RELATIONSHIP = 'PRICE_DIMENSION_MERCHANT_RELATIONSHIP';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const PRICE_GROSS_MODE = 'GROSS_MODE';
